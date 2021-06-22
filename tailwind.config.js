@@ -11,13 +11,33 @@ module.exports = {
         videoHeight: '30vh'
       },
       colors: {
-        merah: '#ec1d27',
-        abuAbu: '#242424'
+        hijau: '#3e5641',
+        merah: '#a24936',
+        jingga: '#d36135',
+        hijautua: '#282B28',
+        hijaumuda: '#83BCA9'
       }
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      padding: ['hover', 'group-hover', 'even', 'odd'],
+      height: ['hover', 'group-hover'],
+      width: ['hover', 'group-hover'],
+      margin: ['hover', 'group-hover'],
+      fontWeight: ['hover', 'group-hover'],
+      transform: ['hover', 'group-hover'],
+      scale: ['hover', 'group-hover'],
+      translate: ['hover', 'group-hover'],
+      inset: ['hover', 'group-hover'],
+      space: ['hover', 'group-hover'],
+      transitionDelay: ['hover', 'group-hover'],
+      backgroundColor: ['even', 'odd'],
+      flexDirection: ['even', 'odd'],
+      textColor: ['even', 'odd'],
+      backgroundImage: ['first', 'last', 'even', 'odd'],
+      gradientColorStops: ['first', 'last', 'even', 'odd'],
+    },
   },
   plugins: [],
 }

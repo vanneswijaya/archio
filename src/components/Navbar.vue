@@ -3,11 +3,10 @@
     class="
       lg:w-full
       w-screen
-      lg:h-14
-      h-12
+      lg:h-24
+      h-24
       flex
       items-center
-      lg:justify-between
       justify-between
       xl:pl-20
       lg:pl-5
@@ -16,8 +15,7 @@
       -left-0
       z-50
       header
-      bg-white
-      border-b-2 border-gray-300
+      bg-merah
     "
     :class="{
       'navbar--hidden': !showNavbar && !openMenu,
@@ -26,14 +24,14 @@
     }"
   >
     <div
-      class="lg:hidden w-12 h-full bg-white flex items-center justify-center"
+      class="lg:hidden w-12 h-full bg-merah flex items-center justify-center"
       v-on:click="openMenu = !openMenu"
     >
       <div id="nav-icon3" :class="{ open: openMenu }">
-        <span class="bg-black"></span>
-        <span class="bg-black"></span>
-        <span class="bg-black"></span>
-        <span class="bg-black"></span>
+        <span class="bg-white"></span>
+        <span class="bg-white"></span>
+        <span class="bg-white"></span>
+        <span class="bg-white"></span>
       </div>
     </div>
     <a
@@ -58,14 +56,13 @@
           pl-1
           justify-center
           flex-nowrap flex-col
-          text-black
+          text-white
         "
       >
-        <span class="text-sm text-merah font-medium">Yayasan</span>
-        <span class="font-medium -mt-2">Santa Adeline Kasih</span>
+        <span class="font-thin -mt-2">ARCHIO</span>
       </div>
     </a>
-    <div class="lg:hidden w-12 h-full bg-white"></div>
+    <div class="lg:hidden w-12 h-full bg-merah"></div>
 
     <div
       class="
@@ -78,21 +75,21 @@
         lg:px-0
         px-6
         hidden
-        text-black
-        font-medium
+        text-white
+        font-thin
       "
     >
       <a
         href="/"
-        v-on:click="toOtherPage('')"
         class="
           mr-3
           default
           lg:text-md
-          text-sm
+          text-lg
           cursor-pointer
           rounded-xl
-          hover:bg-merah hover:text-white
+          hover:bg-jingga
+          text-white
           transition
           duration-500
           ease-in-out
@@ -105,80 +102,15 @@
         >Home</a
       >
       <a
-        href="/projects"
-        v-on:click="toOtherPage('projects')"
-        class="
-          mr-3
-          default
-          lg:text-md
-          text-sm
-          cursor-pointer
-          rounded-xl
-          hover:bg-merah hover:text-white
-          transition
-          duration-500
-          ease-in-out
-          whitespace-nowrap
-          tracking-normal
-        "
-        :class="{
-          onPage: $route.meta.onPage === 'projects',
-        }"
-        >Projects</a
-      >
-      <a
-        href="/news"
-        v-on:click="toOtherPage('news')"
-        class="
-          mr-3
-          default
-          lg:text-md
-          text-sm
-          cursor-pointer
-          rounded-xl
-          hover:bg-merah hover:text-white
-          transition
-          duration-500
-          ease-in-out
-          whitespace-nowrap
-          tracking-normal
-        "
-        :class="{
-          onPage: $route.meta.onPage === 'news',
-        }"
-        >News</a
-      >
-      <a
-        href="/join"
-        class="
-          mr-3
-          default
-          lg:text-md
-          text-sm
-          cursor-pointer
-          rounded-xl
-          hover:bg-merah hover:text-white
-          transition
-          duration-500
-          ease-in-out
-          whitespace-nowrap
-          tracking-normal
-        "
-        :class="{
-          onPage: $route.meta.onPage === 'joinus',
-        }"
-        >Join Us</a
-      >
-      <a
         href="/about"
         class="
           mr-3
           default
           lg:text-md
-          text-sm
+          text-lg
           cursor-pointer
           rounded-xl
-          hover:bg-merah hover:text-white
+          hover:bg-jingga 
           transition
           duration-500
           ease-in-out
@@ -186,9 +118,51 @@
           tracking-normal
         "
         :class="{
-          onPage: $route.meta.onPage === 'aboutus',
+          onPage: $route.meta.onPage === 'about',
         }"
-        >About</a
+        >About Us</a
+      >
+      <a
+        href="/works"
+        class="
+          mr-3
+          default
+          lg:text-md
+          text-lg
+          cursor-pointer
+          rounded-xl
+          hover:bg-jingga 
+          transition
+          duration-500
+          ease-in-out
+          whitespace-nowrap
+          tracking-normal
+        "
+        :class="{
+          onPage: $route.meta.onPage === 'works',
+        }"
+        >Our Works</a
+      >
+      <a
+        href="/services"
+        class="
+          mr-3
+          default
+          lg:text-md
+          text-lg
+          cursor-pointer
+          rounded-xl
+          hover:bg-jingga 
+          transition
+          duration-500
+          ease-in-out
+          whitespace-nowrap
+          tracking-normal
+        "
+        :class="{
+          onPage: $route.meta.onPage === 'services',
+        }"
+        >Services</a
       >
       <a
         href="/contact"
@@ -196,10 +170,10 @@
           mr-3
           default
           lg:text-md
-          text-sm
+          text-lg
           cursor-pointer
           rounded-xl
-          hover:bg-merah hover:text-white
+          hover:bg-jingga 
           transition
           duration-500
           ease-in-out
@@ -211,40 +185,15 @@
         }"
         >Contact</a
       >
-      <a
-        href="/donate"
-        class="
-          mr-3
-          default
-          bg-merah
-          text-white
-          rounded-xl
-          lg:text-md
-          text-sm
-          cursor-pointer
-          shadow-xl
-          transition
-          duration-500
-          ease-in-out
-          whitespace-nowrap
-          tracking-normal
-          transform
-          hover:scale-110
-        "
-        :class="{
-          onPage: $route.meta.onPage === 'donate',
-        }"
-        >Donate Now</a
-      >
     </div>
 
     <div
-      class="lg:hidden fixed w-screen h-screen top-12 -left-0 z-20 duration-500"
+      class="lg:hidden fixed w-screen h-screen top-24 -left-0 z-20 duration-500"
       :class="{ 'opacity-0': !openMenu, 'pointer-events-none': !openMenu }"
     >
       <div
         class="
-          bg-white
+          bg-merah
           w-full
           h-full
           flex
@@ -255,16 +204,17 @@
       >
         <div
           class="
-            text-center text-black
+            text-center text-white
             flex flex-col
             items-center
             pb-64
             text-xl
+            font-thin
           "
         >
           <a
             href="/"
-            class="cursor-pointer mb-3 hover:text-merah"
+            class="cursor-pointer mb-3 hover:font-medium"
             :class="{
               onPage: $route.meta.onPage === 'home',
               canHover: $route.meta.onPage !== 'home',
@@ -272,36 +222,9 @@
             >Home</a
           >
           <a
-            href="/projects"
-            class="cursor-pointer mb-3 hover:text-merah"
-            :class="{
-              onPage: $route.meta.onPage === 'projects',
-              canHover: $route.meta.onPage !== 'projects',
-            }"
-            >Projects</a
-          >
-          <a
-            href="/news"
-            class="cursor-pointer mb-3 hover:text-merah"
-            :class="{
-              onPage: $route.meta.onPage === 'news',
-              canHover: $route.meta.onPage !== 'news',
-            }"
-            >News</a
-          >
-          <a
-            href="/join"
-            class="cursor-pointer mb-3 hover:text-merah"
-            :class="{
-              onPage: $route.meta.onPage === 'join',
-              canHover: $route.meta.onPage !== 'join',
-            }"
-            >Join</a
-          >
-          <a
             href="/about"
             v-on:click="toOtherPage('about')"
-            class="cursor-pointer mb-3 hover:text-merah"
+            class="cursor-pointer mb-3 hover:font-medium"
             :class="{
               onPage: $route.meta.onPage === 'about',
               canHover: $route.meta.onPage !== 'about',
@@ -309,14 +232,32 @@
             >About</a
           >
           <a
-            href="/donate"
-            v-on:click="toOtherPage('donate')"
-            class="cursor-pointer mb-3 hover:text-merah"
+            href="/works"
+            class="cursor-pointer mb-3 hover:font-medium"
             :class="{
-              onPage: $route.meta.onPage === 'donate',
-              canHover: $route.meta.onPage !== 'donate',
+              onPage: $route.meta.onPage === 'works',
+              canHover: $route.meta.onPage !== 'works',
             }"
-            >Donate Now</a
+            >Our Works</a
+          >
+          <a
+            href="/services"
+            class="cursor-pointer mb-3 hover:font-medium"
+            :class="{
+              onPage: $route.meta.onPage === 'services',
+              canHover: $route.meta.onPage !== 'services',
+            }"
+            >Services</a
+          >
+          <a
+            href="/contact"
+            v-on:click="toOtherPage('contact')"
+            class="cursor-pointer mb-3 hover:font-medium"
+            :class="{
+              onPage: $route.meta.onPage === 'contact',
+              canHover: $route.meta.onPage !== 'contact',
+            }"
+            >Contact Us</a
           >
         </div>
       </div>
@@ -383,11 +324,8 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat&family=Rubik+Mono+One&display=swap%27");
-
-* {
-  /* font-family: 'Cinzel', serif; */
-  font-family: "Montserrat", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');* {
+  font-family: "Poppins", sans-serif;
 }
 .header {
   transform: translate3d(0, 0, 0);
@@ -501,23 +439,6 @@ export default {
 .canHover:hover:after {
   width: 100%;
   left: 0;
-}
-
-.onPage:after {
-  background: none repeat scroll 0 0 transparent;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 1px;
-  left: 0;
-  position: absolute;
-  background: #ec1d27;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 100%;
-}
-
-.onPage {
-  color: #ec1d27;
 }
 
 /* @font-face {

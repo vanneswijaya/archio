@@ -1,7 +1,6 @@
 <template>
   <Navbar></Navbar>
-  <div v-if="isLoading" class="flex h-screen justify-center items-center"></div>
-  <div v-else>
+  <div class="mt-36">
     <router-view :key="$route.fullPath" />
   </div>
   <Footer></Footer>
@@ -35,14 +34,13 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#app {
-  font-family: "Montserrat", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');* {
+  font-family: "Poppins", sans-serif;
 }
 
 .cssload-main {
   position: absolute;
-  content: "";
+  content: ""; 
   left: 50%;
   transform: translate(-100%, -240%);
   -o-transform: translate(-100%, -240%);
