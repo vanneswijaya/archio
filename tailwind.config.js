@@ -15,7 +15,8 @@ module.exports = {
         merah: '#a24936',
         jingga: '#d36135',
         hijautua: '#282B28',
-        hijaumuda: '#83BCA9'
+        hijaumuda: '#83BCA9',
+        krem: '#F1E4D7'
       }
     },
   },
@@ -25,6 +26,7 @@ module.exports = {
       height: ['hover', 'group-hover'],
       width: ['hover', 'group-hover'],
       margin: ['hover', 'group-hover'],
+      borderWidth: ['hover', 'group-hover'],
       fontWeight: ['hover', 'group-hover'],
       transform: ['hover', 'group-hover'],
       scale: ['hover', 'group-hover'],

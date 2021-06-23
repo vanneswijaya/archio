@@ -19,8 +19,6 @@
     "
     :class="{
       'navbar--hidden': !showNavbar && !openMenu,
-      'border-white': !openMenu,
-      'border-b': !openMenu,
     }"
   >
     <div
@@ -76,7 +74,7 @@
         px-6
         hidden
         text-white
-        font-thin
+        font-normal
       "
     >
       <a
