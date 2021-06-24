@@ -108,7 +108,7 @@
           text-lg
           cursor-pointer
           rounded-xl
-          hover:bg-jingga 
+          hover:bg-jingga
           transition
           duration-500
           ease-in-out
@@ -129,7 +129,7 @@
           text-lg
           cursor-pointer
           rounded-xl
-          hover:bg-jingga 
+          hover:bg-jingga
           transition
           duration-500
           ease-in-out
@@ -150,7 +150,7 @@
           text-lg
           cursor-pointer
           rounded-xl
-          hover:bg-jingga 
+          hover:bg-jingga
           transition
           duration-500
           ease-in-out
@@ -171,7 +171,7 @@
           text-lg
           cursor-pointer
           rounded-xl
-          hover:bg-jingga 
+          hover:bg-jingga
           transition
           duration-500
           ease-in-out
@@ -298,18 +298,18 @@ export default {
     window.removeEventListener("scroll", this.updateScroll);
   },
   methods: {
-    onScroll() {
-      const currentScrollPosition =
-        window.pageYOffset || document.documentElement.scrollTop;
-      if (currentScrollPosition < 0) {
-        return;
-      }
-      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
-        return;
-      }
-      this.showNavbar = currentScrollPosition < this.lastScrollPosition;
-      this.lastScrollPosition = currentScrollPosition;
-    },
+    // onScroll() {
+    //   const currentScrollPosition =
+    //     window.pageYOffset || document.documentElement.scrollTop;
+    //   if (currentScrollPosition < 0) {
+    //     return;
+    //   }
+    //   if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
+    //     return;
+    //   }
+    //   this.showNavbar = currentScrollPosition < this.lastScrollPosition;
+    //   this.lastScrollPosition = currentScrollPosition;
+    // },
     handleScroll() {
       if (window.pageYOffset > 0) {
         if (this.view.topOfPage) this.view.topOfPage = false;
@@ -322,7 +322,8 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');* {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
   font-family: "Poppins", sans-serif;
 }
 .header {
