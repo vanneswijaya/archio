@@ -1,5 +1,6 @@
 <template>
-  <div class="flex flex-col bg-merah">
+  <Loading v-if="loaded"></Loading>
+  <div v-else class="flex flex-col bg-merah">
     <section
       class="w-screen h-screen bg-cover flex flex-col z-0"
       style="
@@ -116,11 +117,19 @@
 
 <script>
 import api from "../api/api.js";
+import Loading from "./Loading.vue";
 
 export default {
+  components: {
+    Loading,
+  },
+  setup() {
+    return {};
+  },
   data() {
     return {
       url: "http://localhost:1337",
+      loaded: true,
     };
   },
   methods: {
@@ -139,6 +148,11 @@ export default {
   },
   async created() {
     await this.refreshPage();
+    console.log(this.loaded);
+    setTimeout(() => {
+      this.loaded = false;
+    }, 3000);
+    console.log(this.loaded);
   },
 };
 </script>
