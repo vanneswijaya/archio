@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col">
+  <div class="flex flex-col bg-merah">
     <section
       class="w-screen h-screen bg-cover flex flex-col z-0"
       style="
@@ -13,53 +13,132 @@
         </div>
       </div>
     </section>
-    <section class="h-full w-screen bg-jingga">
-      <div class="flex flex-wrap">
-        <a href="">
+    <section class="h-full w-screen bg-merah">
+      <div class="flex flex-wrap mx-20 my-28 gap-x-10 gap-y-20">
+        <div
+          v-for="work in works"
+          :key="work"
+          class="relative w-96 h-96 shadow-lg bg-cover bg-center cursor-pointer"
+          :style="imagesToUrlStyle(work.mainImage.url)"
+        >
           <div
             class="
-              hover:-translate-y-1 hover:scale-110
-              relative
-              w-full
-              h-48
-              shadow-lg
-              rounded-lg
-              bg-cover bg-center
-              cursor-pointer
-            "
-            style="
-              background-image: url('https://www.thewowstyle.com/wp-content/uploads/2015/01/house-architecture-photography-hd-wallpaper-1920x1200-9237.jpg');
+              absolute
+              p-5
+              2xl:text-5xl
+              text-3xl text-white
+              font-semibold
+              z-20
             "
           >
+            {{ work.title }}
+          </div>
+          <div
+            class="
+              bg-gradient-to-b
+              from-black
+              via-transparent
+              to-transparent
+              absolute
+              opacity-70
+              w-full
+              h-full
+              inset-0
+            "
+          ></div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="flex flex-row-reverse w-screen h-full bg-merah items-center mb-20"
+    >
+      <div class="w-1/2">
+        <img
+          src="https://i.pinimg.com/originals/5a/e3/eb/5ae3eb73f733be342867f7f1b5fd98fd.jpg"
+          alt=""
+        />
+      </div>
+      <div class="w-1/2 h-full ml-20 mt-20 flex flex-col gap-10">
+        <div class="text-7xl text-white font-medium leading-tight">
+          Make your ideal project happen now.<br />
+          <p class="text-hijaumuda">Are you ready?</p>
+        </div>
+        <div class="flex flex-row gap-10">
+          <a href="">
             <div
               class="
-                absolute
-                p-5
-                2xl:text-5xl
-                text-3xl text-white
+                p-4
+                px-10
+                rounded-xl
+                bg-transparent
+                border-2
+                hover:border-transparent
+                border-white
+                hover:bg-jingga
+                transform
+                text-white
                 font-semibold
-                z-20
+                text-xl
+                w-full
+                text-center
               "
             >
-              Black Minimalism
+              <button>Book Appointment</button>
             </div>
+          </a>
+          <a href="">
             <div
               class="
-                bg-gradient-to-b
-                from-black
-                via-transparent
-                to-transparent
-                absolute
-                opacity-70
+                p-4
+                px-10
+                rounded-xl
+                bg-transparent
+                border-2
+                hover:border-transparent
+                border-white
+                hover:bg-jingga
+                transform
+                text-white
+                font-semibold
+                text-xl
                 w-full
-                h-full
-                inset-0
-                rounded-lg
+                text-center
               "
-            ></div>
-          </div>
-        </a>
+            >
+              <button>Contact Us</button>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
   </div>
 </template>
+
+<script>
+import api from "../api/api.js";
+
+export default {
+  data() {
+    return {
+      url: "http://localhost:1337",
+    };
+  },
+  methods: {
+    async refreshPage() {
+      this.works = await api.getAllWorks().then((result) => {
+        return result.data;
+      });
+      console.log(this.works);
+    },
+    imagesToUrl(image) {
+      return this.url + image;
+    },
+    imagesToUrlStyle(image) {
+      return "background-image: url('" + this.url + image + "')";
+    },
+  },
+  async created() {
+    await this.refreshPage();
+  },
+};
+</script>
