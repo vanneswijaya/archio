@@ -4,8 +4,8 @@
       <div class="flex flex-row">
         <div class="h-full w-1/3 ml-36 mt-20">
           <div class="text-7xl text-white font-medium leading-tight">
-            <p>Designing spatial experience,</p>
-            <p class="text-hijaumuda">for better living</p>
+            <p>Creating spatial experience,</p>
+            <p class="text-hijaumuda">for your space</p>
           </div>
         </div>
         <div class="h-full w-full mr-36 ml-24">
@@ -58,7 +58,7 @@
               text-center
             "
           >
-            <button>Our Works</button>
+            <button>Services</button>
           </div>
         </a>
         <a href="">
@@ -80,7 +80,7 @@
               text-center
             "
           >
-            <button>Services</button>
+            <button>Our Works</button>
           </div>
         </a>
       </div>
@@ -94,14 +94,12 @@
     >
       <div class="bg-black bg-opacity-50 absolute w-full h-full"></div>
       <div class="flex flex-col w-1/2 text-white ml-36 mt-36 gap-10 z-50">
-        <div class="text-7xl font-bold">Aims to Provide Better Living Area</div>
+        <div class="text-7xl font-bold">
+          We are your best choice for achitecture design
+        </div>
         <div class="text-2xl">
-          We provide your best living experience through architecture and
-          interior design service.<br />
-          <p class="text-hijaumuda font-semibold">
-            One-stop design solution for your residential or commercial design
-            needs.
-          </p>
+          One-stop design solution for your residential or commercial design
+          needs.
         </div>
         <div class="flex flex-row gap-10">
           <a href="">
@@ -123,7 +121,7 @@
                 text-center
               "
             >
-              <button>Architecture Design</button>
+              <button>Exterior Design</button>
             </div>
           </a>
           <a href="">
@@ -167,7 +165,7 @@
                 text-center
               "
             >
-              <button>Structure Planning</button>
+              <button>3D Animation</button>
             </div>
           </a>
         </div>
@@ -181,7 +179,7 @@
 
       <div class="w-1/2 h-full ml-20 mt-20 flex flex-col gap-10">
         <div class="text-7xl text-white font-thin leading-tight">
-          We help to create a worth-living spatial area.
+          We fulfill your need of a worth-living space
         </div>
         <div class="text-2xl text-white font-thin leading-tight">
           Discover our latest projects

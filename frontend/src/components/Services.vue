@@ -1,6 +1,6 @@
 <template>
   <Loading v-if="loaded"></Loading>
-  <div v-else class="flex flex-col bg-merah">
+  <div v-else class="flex flex-col bg-merah overflow-hidden">
     <section
       class="w-screen h-screen bg-cover bg-center flex flex-row relative z-0"
       style="
@@ -9,7 +9,9 @@
     >
       <div class="h-full w-1/3 ml-48 mt-20 absolute z-50">
         <div class="text-white text-9xl font-semibold leading-tight">
-          Our quality services.
+          Our
+          <p class="text-jingga">quality</p>
+          services.
         </div>
       </div>
       <div
@@ -42,6 +44,9 @@
           grid
           justify-items-center
           items-center
+          transition
+          duration-500
+          ease-in-out
         "
         @click="clickChange('exterior')"
       >
@@ -61,6 +66,9 @@
           grid
           justify-items-center
           items-center
+          transition
+          duration-500
+          ease-in-out
         "
         @click="clickChange('interior')"
       >
@@ -80,22 +88,201 @@
           grid
           justify-items-center
           items-center
+          transition
+          duration-500
+          ease-in-out
         "
         @click="clickChange('animation')"
       >
         <p class="text-3xl font-medium">Animation</p>
       </div>
     </section>
-    <section class="w-screen h-screen flex flex-col bg-jingga">
-      <div v-show="exterior"></div>
-      <div v-show="interior"></div>
-      <div v-show="animation"></div>
+    <section class="w-screen h-full flex flex-col bg-jingga">
+      <div v-show="exterior" class="w-full h-full flex flex-col py-28">
+        <div class="grid grid-cols-2 h-64 mx-36">
+          <div class="flex flex-col">
+            <div class="text-6xl font-semibold text-white inset-y-0 left-0">
+              Exterior<br />Design
+            </div>
+            <div class="w-24 h-1 bg-white mt-5"></div>
+          </div>
+          <div
+            class="text-xl font-light text-white inset-y-0 right-0 text-justify"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim id
+            iusto quasi excepturi fugiat, eius quia qui, natus incidunt sint
+            doloribus doloremque, similique minima aut eveniet magnam
+            exercitationem ut. Iusto!
+          </div>
+        </div>
+        <div class="px-36 w-screen h-screen">
+          <div
+            class="w-full h-full bg-cover bg-center"
+            style="
+              background-image: url('https://cdn.wallpaper.com/main/g_ad-gin-studio-gb-space-20-facade-1.gif');
+            "
+          ></div>
+        </div>
+        <div class="w-screen h-full px-36 pt-20">
+          <div
+            class="
+              py-20
+              bg-merah
+              h-96
+              w-full
+              flex flex-row
+              items-center
+              relative
+            "
+          >
+            <div class="pl-20 pr-28 text-xl text-white font-extralight w-2/3">
+              <p class="font-semibold pb-5 text-2xl text-left">
+                Why do I need exterior visualization?
+              </p>
+              <p class="text-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim id
+                iusto quasi excepturi fugiat, eius quia qui, natus incidunt sint
+                doloribus doloremque, similique minima aut eveniet magnam
+                exercitationem ut. Iusto!
+              </p>
+            </div>
+            <div
+              class="w-full h-full flex pr-28 items-center justify-end absolute"
+            >
+              <img
+                class="max-h-72"
+                src="https://thumbs.gfycat.com/ConcernedTotalDobermanpinscher-size_restricted.gif"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div v-show="interior" class="w-full h-full flex flex-col py-28">
+        <div class="grid grid-cols-2 h-64 mx-36">
+          <div class="flex flex-col">
+            <div class="text-6xl font-semibold text-white inset-y-0 left-0">
+              Interior<br />Design
+            </div>
+            <div class="w-24 h-1 bg-white mt-5"></div>
+          </div>
+          <div
+            class="text-xl font-light text-white inset-y-0 right-0 text-justify"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim id
+            iusto quasi excepturi fugiat, eius quia qui, natus incidunt sint
+            doloribus doloremque, similique minima aut eveniet magnam
+            exercitationem ut. Iusto!
+          </div>
+        </div>
+        <div class="px-36 w-screen h-screen">
+          <div
+            class="w-full h-full bg-cover bg-center"
+            style="
+              background-image: url('https://cdn.wallpaper.com/main/g_ad-gin-studio-gb-space-20-facade-1.gif');
+            "
+          ></div>
+        </div>
+        <div class="w-screen h-full px-36 pt-20">
+          <div
+            class="
+              py-20
+              bg-merah
+              h-96
+              w-full
+              flex flex-row
+              items-center
+              relative
+            "
+          >
+            <div class="pl-20 pr-28 text-xl text-white font-extralight w-2/3">
+              <p class="font-semibold pb-5 text-2xl text-left">
+                Why do I need interior visualization?
+              </p>
+              <p class="text-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim id
+                iusto quasi excepturi fugiat, eius quia qui, natus incidunt sint
+                doloribus doloremque, similique minima aut eveniet magnam
+                exercitationem ut. Iusto!
+              </p>
+            </div>
+            <div
+              class="w-full h-full flex pr-28 items-center justify-end absolute"
+            >
+              <img
+                class="max-h-72"
+                src="https://enkimagazine.com/wp-content/uploads/2019/09/Sara-Klomps-colour-1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div v-show="animation" class="w-full h-full flex flex-col py-28">
+        <div class="grid grid-cols-2 h-64 mx-36">
+          <div class="flex flex-col">
+            <div class="text-6xl font-semibold text-white inset-y-0 left-0">
+              3D<br />Animation
+            </div>
+            <div class="w-24 h-1 bg-white mt-5"></div>
+          </div>
+          <div
+            class="text-xl font-light text-white inset-y-0 right-0 text-justify"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim id
+            iusto quasi excepturi fugiat, eius quia qui, natus incidunt sint
+            doloribus doloremque, similique minima aut eveniet magnam
+            exercitationem ut. Iusto!
+          </div>
+        </div>
+        <div class="px-36 w-screen h-screen">
+          <div
+            class="w-full h-full bg-cover bg-center"
+            style="
+              background-image: url('https://cdn.wallpaper.com/main/g_ad-gin-studio-gb-space-20-facade-1.gif');
+            "
+          ></div>
+        </div>
+        <div class="w-screen h-full px-36 pt-20">
+          <div
+            class="
+              py-20
+              bg-merah
+              h-96
+              w-full
+              flex flex-row
+              items-center
+              relative
+            "
+          >
+            <div class="pl-20 pr-28 text-xl text-white font-extralight w-2/3">
+              <p class="font-semibold pb-5 text-2xl text-left">
+                Why do I need exterior visualization?
+              </p>
+              <p class="text-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim id
+                iusto quasi excepturi fugiat, eius quia qui, natus incidunt sint
+                doloribus doloremque, similique minima aut eveniet magnam
+                exercitationem ut. Iusto!
+              </p>
+            </div>
+            <div
+              class="w-full h-full flex pr-28 items-center justify-end absolute"
+            >
+              <img
+                class="max-h-72"
+                src="https://thumbs.gfycat.com/ConcernedTotalDobermanpinscher-size_restricted.gif"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
 </template>
 
 <script>
-import api from "../api/api.js";
 import Loading from "./Loading.vue";
 
 export default {
@@ -115,12 +302,6 @@ export default {
     };
   },
   methods: {
-    async refreshPage() {
-      this.works = await api.getAllWorks().then((result) => {
-        return result.data;
-      });
-      console.log(this.works);
-    },
     clickChange(clicked) {
       this.exterior = false;
       this.interior = false;
@@ -137,7 +318,6 @@ export default {
     },
   },
   async created() {
-    await this.refreshPage();
     console.log(this.loaded);
     setTimeout(() => {
       this.loaded = false;

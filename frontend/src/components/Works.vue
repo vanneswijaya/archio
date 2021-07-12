@@ -9,7 +9,7 @@
     >
       <div class="h-full w-full ml-36 mt-20">
         <div class="text-7xl text-white font-medium leading-tight">
-          <p>Our latest projects</p>
+          <p>Our recent works</p>
           <p class="text-jingga">for better living.</p>
         </div>
       </div>
@@ -55,14 +55,14 @@
     >
       <div class="w-1/2">
         <img
-          src="https://i.pinimg.com/originals/5a/e3/eb/5ae3eb73f733be342867f7f1b5fd98fd.jpg"
+          src="https://parametric-architecture.com/wp-content/uploads/2019/09/veronang_PA_03.jpg"
           alt=""
         />
       </div>
-      <div class="w-1/2 h-full ml-20 mt-20 flex flex-col gap-10">
+      <div class="w-1/2 h-full mx-20 mt-20 flex flex-col gap-10">
         <div class="text-7xl text-white font-medium leading-tight">
-          Make your ideal project happen now.<br />
-          <p class="text-hijaumuda">Are you ready?</p>
+          Take action and enjoy the benefits.<br />
+          <p class="text-hijaumuda">Ready to work with us?</p>
         </div>
         <div class="flex flex-row gap-10">
           <a href="">

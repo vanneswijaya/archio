@@ -121,27 +121,6 @@
         >About Us</a
       >
       <a
-        href="/works"
-        class="
-          mr-3
-          default
-          lg:text-md
-          text-lg
-          cursor-pointer
-          rounded-xl
-          hover:bg-jingga
-          transition
-          duration-500
-          ease-in-out
-          whitespace-nowrap
-          tracking-normal
-        "
-        :class="{
-          onPage: $route.meta.onPage === 'works',
-        }"
-        >Our Works</a
-      >
-      <a
         href="/services"
         class="
           mr-3
@@ -161,6 +140,27 @@
           onPage: $route.meta.onPage === 'services',
         }"
         >Services</a
+      >
+      <a
+        href="/works"
+        class="
+          mr-3
+          default
+          lg:text-md
+          text-lg
+          cursor-pointer
+          rounded-xl
+          hover:bg-jingga
+          transition
+          duration-500
+          ease-in-out
+          whitespace-nowrap
+          tracking-normal
+        "
+        :class="{
+          onPage: $route.meta.onPage === 'works',
+        }"
+        >Our Works</a
       >
       <a
         href="/contact"
