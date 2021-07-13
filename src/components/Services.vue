@@ -329,16 +329,18 @@
       </div>
     </section>
     <section
-      class="flex flex-row-reverse w-screen h-full bg-merah items-center mb-20"
+      class="
+        grid grid-cols-2
+        w-screen
+        h-full
+        bg-jingga
+        items-center
+        pb-20
+        px-36
+      "
     >
-      <div class="w-1/2">
-        <img
-          src="https://parametric-architecture.com/wp-content/uploads/2019/09/veronang_PA_03.jpg"
-          alt=""
-        />
-      </div>
-      <div class="w-1/2 h-full mx-20 mt-20 flex flex-col gap-10">
-        <div class="text-7xl text-white font-medium leading-tight">
+      <div class="h-full mx-20 mt-20 flex flex-col gap-10">
+        <div class="text-6xl text-white font-medium leading-tight">
           We provide the best quality works.<br />
           <p class="text-merah">Interested in our services?</p>
         </div>
@@ -353,7 +355,7 @@
                 border-2
                 hover:border-transparent
                 border-white
-                hover:bg-jingga
+                hover:bg-merah
                 transform
                 text-white
                 font-semibold
@@ -375,7 +377,7 @@
                 border-2
                 hover:border-transparent
                 border-white
-                hover:bg-jingga
+                hover:bg-merah
                 transform
                 text-white
                 font-semibold
@@ -389,6 +391,10 @@
           </a>
         </div>
       </div>
+      <img
+        src="https://drowart.com/wp-content/uploads/2021/04/PORTFOLIO_04_27-scaled.jpg"
+        alt=""
+      />
     </section>
   </div>
 </template>
