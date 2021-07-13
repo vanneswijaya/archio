@@ -106,28 +106,6 @@
             <div
               class="
                 p-4
-                px-8
-                rounded-xl
-                bg-transparent
-                border-2
-                hover:border-transparent
-                border-white
-                hover:bg-jingga
-                transform
-                text-white
-                font-semibold
-                text-xl
-                w-48
-                text-center
-              "
-            >
-              <button>Exterior Design</button>
-            </div>
-          </a>
-          <a href="">
-            <div
-              class="
-                p-4
                 px-10
                 rounded-xl
                 bg-transparent
@@ -144,6 +122,28 @@
               "
             >
               <button>Interior Design</button>
+            </div>
+          </a>
+          <a href="">
+            <div
+              class="
+                p-4
+                px-8
+                rounded-xl
+                bg-transparent
+                border-2
+                hover:border-transparent
+                border-white
+                hover:bg-jingga
+                transform
+                text-white
+                font-semibold
+                text-xl
+                w-48
+                text-center
+              "
+            >
+              <button>Exterior Design</button>
             </div>
           </a>
           <a href="">
