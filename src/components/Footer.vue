@@ -54,7 +54,7 @@
         <p class="font-thin text-white text-2xl">Our Social Media</p>
         <hr class="w-auto my-3" />
         <div class="flex flex-row gap-x-5 text-left pt-2">
-          <a :href="footer.facebookLink" target="_blank"
+          <a href=""
             ><div
               class="
                 fill-current
@@ -103,7 +103,7 @@
                 </g>
               </svg></div
           ></a>
-          <a :href="footer.instagramLink" target="_blank"
+          <a href=""
             ><div
               class="
                 w-8
@@ -151,7 +151,7 @@
                 </g>
               </svg></div
           ></a>
-          <a :href="footer.twitterLink" target="_blank"
+          <a href=""
             ><div
               class="
                 w-8
@@ -206,7 +206,7 @@
         <hr class="w-auto my-3" />
 
         <div class="flex flex-col gap-3 text-black">
-          <a href="#" @click="emailFunction(footer.email)"
+          <a href=""
             ><div class="flex flex-row gap-x-2 items-center pt-2 text-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -225,7 +225,7 @@
               <p class="font-thin text-l">archio@gmail.com</p>
             </div></a
           >
-          <a href="#" @click="callFunction(footer.nomorTelepon)"
+          <a href=""
             ><div class="flex flex-row gap-x-2 items-center text-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -244,7 +244,7 @@
               <p class="font-thin text-l">+6281143252221</p>
             </div></a
           >
-          <a :href="footer.mapsLink" target="_blank"
+          <a href="" target="_blank"
             ><div class="flex flex-row gap-x-2 items-center text-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
