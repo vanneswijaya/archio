@@ -1,6 +1,6 @@
 <template>
   <Loading v-if="loaded"></Loading>
-  <div v-else class="flex flex-col bg-merah">
+  <div v-else class="flex flex-col bg-merah overflow-hidden">
     <section
       class="w-screen h-screen bg-cover bg-center flex flex-col z-0"
       style="
@@ -17,7 +17,15 @@
     <section class="h-full w-screen bg-merah">
       <div class="flex flex-wrap mx-20 my-28 gap-x-10 gap-y-20">
         <div
-          class="relative w-96 h-96 shadow-lg bg-cover bg-center cursor-pointer"
+          class="
+            relative
+            w-96
+            h-96
+            shadow-lg
+            bg-cover bg-center
+            cursor-pointer
+            group
+          "
           style="
             background-image: url('https://drowart.com/wp-content/uploads/2021/05/WANICKI_salon_2-1386x1600.jpg');
           "
@@ -28,11 +36,16 @@
               p-5
               2xl:text-5xl
               text-3xl text-white
-              font-semibold
+              font-thin
               z-20
+              opacity-0
+              group-hover:opacity-100
+              transition
+              duration-500
+              ease-in-out
             "
           >
-            Modern Interior
+            Modern Living Room
           </div>
           <div
             class="
@@ -41,10 +54,259 @@
               via-transparent
               to-transparent
               absolute
-              opacity-70
+              opacity-0
               w-full
               h-full
               inset-0
+              group-hover:opacity-95
+              transition
+              duration-500
+              ease-in-out
+            "
+          ></div>
+        </div>
+        <div
+          class="
+            relative
+            w-96
+            h-96
+            shadow-lg
+            bg-cover bg-center
+            cursor-pointer
+            group
+          "
+          style="
+            background-image: url('https://drowart.com/wp-content/uploads/2021/05/PORTFOLIO_01_15-2346x1600.jpg');
+          "
+        >
+          <div
+            class="
+              absolute
+              p-5
+              2xl:text-5xl
+              text-3xl text-white
+              font-thin
+              z-20
+              opacity-0
+              group-hover:opacity-100
+              transition
+              duration-500
+              ease-in-out
+            "
+          >
+            Outdoor Bathroom
+          </div>
+          <div
+            class="
+              bg-gradient-to-b
+              from-black
+              via-transparent
+              to-transparent
+              absolute
+              opacity-0
+              w-full
+              h-full
+              inset-0
+              group-hover:opacity-95
+              transition
+              duration-500
+              ease-in-out
+            "
+          ></div>
+        </div>
+        <div
+          class="
+            relative
+            w-96
+            h-96
+            shadow-lg
+            bg-cover bg-center
+            cursor-pointer
+            group
+          "
+          style="
+            background-image: url('https://drowart.com/wp-content/uploads/2021/04/PORTFOLIO_01_1-2402x1600.jpg');
+          "
+        >
+          <div
+            class="
+              absolute
+              p-5
+              2xl:text-5xl
+              text-3xl text-white
+              font-thin
+              z-20
+              opacity-0
+              group-hover:opacity-100
+              transition
+              duration-500
+              ease-in-out
+            "
+          >
+            Cozy Exterior
+          </div>
+          <div
+            class="
+              bg-gradient-to-b
+              from-black
+              via-transparent
+              to-transparent
+              absolute
+              opacity-0
+              w-full
+              h-full
+              inset-0
+              group-hover:opacity-95
+              transition
+              duration-500
+              ease-in-out
+            "
+          ></div>
+        </div>
+        <div
+          class="
+            relative
+            w-96
+            h-96
+            shadow-lg
+            bg-cover bg-center
+            cursor-pointer
+            group
+          "
+          style="
+            background-image: url('https://drowart.com/wp-content/uploads/2021/05/PORTFOLIO_03_2-1120x1600.jpg');
+          "
+        >
+          <div
+            class="
+              absolute
+              p-5
+              2xl:text-5xl
+              text-3xl text-white
+              font-thin
+              z-20
+              opacity-0
+              group-hover:opacity-100
+              transition
+              duration-500
+              ease-in-out
+            "
+          >
+            Elegant Closet
+          </div>
+          <div
+            class="
+              bg-gradient-to-b
+              from-black
+              via-transparent
+              to-transparent
+              absolute
+              opacity-0
+              w-full
+              h-full
+              inset-0
+              group-hover:opacity-95
+              transition
+              duration-500
+              ease-in-out
+            "
+          ></div>
+        </div>
+        <div
+          class="
+            relative
+            w-96
+            h-96
+            shadow-lg
+            bg-cover bg-center
+            cursor-pointer
+            group
+          "
+          style="
+            background-image: url('https://drowart.com/wp-content/uploads/2021/04/PORTFOLIO_04_28-scaled.jpg');
+          "
+        >
+          <div
+            class="
+              absolute
+              p-5
+              2xl:text-5xl
+              text-3xl text-white
+              font-thin
+              z-20
+              opacity-0
+              group-hover:opacity-100
+              transition
+              duration-500
+              ease-in-out
+            "
+          >
+            Modern Meeting Room
+          </div>
+          <div
+            class="
+              bg-gradient-to-b
+              from-black
+              via-transparent
+              to-transparent
+              absolute
+              opacity-0
+              w-full
+              h-full
+              inset-0
+              group-hover:opacity-95
+              transition
+              duration-500
+              ease-in-out
+            "
+          ></div>
+        </div>
+        <div
+          class="
+            relative
+            w-96
+            h-96
+            shadow-lg
+            bg-cover bg-center
+            cursor-pointer
+            group
+          "
+          style="
+            background-image: url('https://drowart.com/wp-content/uploads/2021/04/PORTFOLIO_02_3-scaled.jpg');
+          "
+        >
+          <div
+            class="
+              absolute
+              p-5
+              2xl:text-5xl
+              text-3xl text-white
+              font-thin
+              z-20
+              opacity-0
+              group-hover:opacity-100
+              transition
+              duration-500
+              ease-in-out
+            "
+          >
+            Relaxing Interior
+          </div>
+          <div
+            class="
+              bg-gradient-to-b
+              from-black
+              via-transparent
+              to-transparent
+              absolute
+              opacity-0
+              w-full
+              h-full
+              inset-0
+              group-hover:opacity-95
+              transition
+              duration-500
+              ease-in-out
             "
           ></div>
         </div>

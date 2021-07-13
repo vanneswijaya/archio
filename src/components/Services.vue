@@ -328,6 +328,68 @@
         </div>
       </div>
     </section>
+    <section
+      class="flex flex-row-reverse w-screen h-full bg-merah items-center mb-20"
+    >
+      <div class="w-1/2">
+        <img
+          src="https://parametric-architecture.com/wp-content/uploads/2019/09/veronang_PA_03.jpg"
+          alt=""
+        />
+      </div>
+      <div class="w-1/2 h-full mx-20 mt-20 flex flex-col gap-10">
+        <div class="text-7xl text-white font-medium leading-tight">
+          We provide the best quality works.<br />
+          <p class="text-merah">Interested in our services?</p>
+        </div>
+        <div class="flex flex-row gap-10">
+          <a href="">
+            <div
+              class="
+                p-4
+                px-10
+                rounded-xl
+                bg-transparent
+                border-2
+                hover:border-transparent
+                border-white
+                hover:bg-jingga
+                transform
+                text-white
+                font-semibold
+                text-xl
+                w-full
+                text-center
+              "
+            >
+              <button>Book Appointment</button>
+            </div>
+          </a>
+          <a href="">
+            <div
+              class="
+                p-4
+                px-10
+                rounded-xl
+                bg-transparent
+                border-2
+                hover:border-transparent
+                border-white
+                hover:bg-jingga
+                transform
+                text-white
+                font-semibold
+                text-xl
+                w-full
+                text-center
+              "
+            >
+              <button>Contact Us</button>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
