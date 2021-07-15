@@ -5,6 +5,10 @@ module.exports = {
     extend: {
       transitionProperty: ["hover", "focus"],
       spacing: {
+        90: "22.5rem",
+        112: "28rem",
+        128: "32rem",
+        160: "40rem",
         cardHeight: "30rem",
         videoHeightXl: "65vh",
         videoHeightLg: "45vh",
