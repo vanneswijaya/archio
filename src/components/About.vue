@@ -1,5 +1,6 @@
 <template>
-  <div class="flex flex-col overflow-x-hidden">
+  <Loading v-if="loaded"></Loading>
+  <div v-else class="flex flex-col overflow-x-hidden">
     <section class="relative flex flex-col w-full">
       <div class="absolute left-96 top-72">
         <div class="flex flex-nowrap gap-10">
@@ -63,12 +64,16 @@
     <section class="w-screen h-screen">
       <div
         class="w-full h-full bg-cover bg-center"
-        style="
-          background-image: url('https://images.adsttc.com/media/images/5e6f/6c5d/b357/653d/d300/02f8/large_jpg/TARA_HI-RES-107_Master.jpg?1584360500');
-        "
+        :style="{ backgroundImage: 'url(' + bgimage + ')' }"
       >
         <div class="parent grid grid-cols-3 w-full h-full">
-          <div class="text-8xl text-white font-semibold ml-10 mt-20">
+          <div
+            class="text-8xl text-white font-semibold ml-10 mt-20"
+            @mouseover="
+              bgimage =
+                'https://images.adsttc.com/media/images/5e6f/6c5d/b357/653d/d300/02f8/large_jpg/TARA_HI-RES-107_Master.jpg?1584360500'
+            "
+          >
             WHY CHOOSE US
           </div>
           <div class="child grid grid-rows-2 w-full h-full">
@@ -81,6 +86,10 @@
                 transition
                 duration-500
                 ease-in-out
+              "
+              @mouseover="
+                bgimage =
+                  'https://www.ariostea-high-tech.com/img/collezioni/cm2-teknostone/+Floors-desktop.jpg'
               "
             >
               <div
@@ -110,6 +119,10 @@
                 transition
                 duration-500
                 ease-in-out
+              "
+              @mouseover="
+                bgimage =
+                  'http://cdn.home-designing.com/wp-content/uploads/2014/06/sloping-landscape-design.jpg'
               "
             >
               <div
@@ -142,6 +155,10 @@
                 duration-500
                 ease-in-out
               "
+              @mouseover="
+                bgimage =
+                  'http://cdn.home-designing.com/wp-content/uploads/2014/06/modern-villa-landscape.jpg'
+              "
             >
               <div
                 class="
@@ -171,6 +188,10 @@
                 duration-500
                 ease-in-out
               "
+              @mouseover="
+                bgimage =
+                  'https://tero.design/multimedia/forest_villa/cam02-min.jpg'
+              "
             >
               <div
                 class="
@@ -193,23 +214,144 @@
         </div>
       </div>
     </section>
-    <section class="w-screen h-screen flex flex-col bg-merah">
+    <section class="w-screen h-full flex flex-col bg-merah">
       <div class="text-8xl font-semibold flex justify-center text-white pt-20">
-        OUR FOUNDERS
+        OUR
+        <p class="text-hijaumuda pl-5">FOUNDER</p>
       </div>
-      <div class="grid grid-cols-2 w-full h-full">
-        <div></div>
-        <div class="grid-rows-2">
-          <div></div>
+      <div class="flex flex-row justify-center w-full h-full pt-20">
+        <div class="w-full h-full flex justify-end pr-10 pt-10">
+          <div
+            class="w-128 h-128 rounded-full bg-cover bg-center"
+            style="
+              background-image: url('https://media.istockphoto.com/photos/portrait-of-handsome-latino-african-man-picture-id1007763808?k=6&m=1007763808&s=612x612&w=0&h=Js1VDBulbaNw_CF7fghP_nhUPCC-DQTqb7Wym1CdTOI=');
+            "
+          ></div>
+        </div>
+        <div
+          class="flex flex-col gap-y-8 items-center w-full h-full pt-36 pr-36"
+        >
+          <div
+            class="
+              text-5xl text-white
+              font-semibold
+              cursor-pointer
+              hover:text-hijaumuda
+              transition
+              duration-500
+              ease-in-out
+            "
+          >
+            John Almeida
+          </div>
+          <div class="text-2xl text-white font-light px-20 text-justify">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero omnis
+            tempora eaque dolores fugiat reprehenderit debitis corrupti
+            assumenda optio voluptas, quis ipsa explicabo perspiciatis, ab
+            libero, nam accusantium fugit impedit!
+          </div>
         </div>
       </div>
     </section>
-    <section></section>
+    <section
+      class="flex flex-row-reverse w-screen h-full bg-merah items-center"
+    >
+      <div
+        class="w-1/2 h-screen rounded-tl-3xl"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8OXx8fGVufDB8fHx8&w=1000&q=80');
+        "
+      >
+        <!-- <img
+          src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8OXx8fGVufDB8fHx8&w=1000&q=80"
+          alt=""
+        /> -->
+      </div>
+      <div class="w-1/2 h-full mx-20 mt-10 flex flex-col gap-10">
+        <div class="text-5xl text-white font-medium leading-tight">
+          Ready to change your living space?<br />
+          <p class="text-hijaumuda">Connect with us now.</p>
+        </div>
+        <div class="flex flex-row gap-10">
+          <a href="">
+            <div
+              class="
+                p-4
+                px-10
+                rounded-xl
+                bg-transparent
+                border-2
+                hover:border-transparent
+                border-white
+                hover:bg-jingga
+                transform
+                text-white
+                font-semibold
+                text-xl
+                w-full
+                text-center
+              "
+            >
+              <button>Book Appointment</button>
+            </div>
+          </a>
+          <a href="">
+            <div
+              class="
+                p-4
+                px-10
+                rounded-xl
+                bg-transparent
+                border-2
+                hover:border-transparent
+                border-white
+                hover:bg-jingga
+                transform
+                text-white
+                font-semibold
+                text-xl
+                w-full
+                text-center
+              "
+            >
+              <button>Contact Us</button>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
+<script>
+import Loading from "./Loading.vue";
+
+export default {
+  components: {
+    Loading,
+  },
+  setup() {
+    return {};
+  },
+  data() {
+    return {
+      loaded: true,
+      bgimage:
+        "https://images.adsttc.com/media/images/5e6f/6c5d/b357/653d/d300/02f8/large_jpg/TARA_HI-RES-107_Master.jpg?1584360500",
+    };
+  },
+  async created() {
+    console.log(this.loaded);
+    setTimeout(() => {
+      this.loaded = false;
+    }, 3000);
+    console.log(this.loaded);
+  },
+};
+</script>
+
 <style scoped>
-div.parent {
+/* div.parent {
   pointer-events: none;
 }
 
@@ -219,5 +361,5 @@ div.child {
 
 div.parent:hover {
   background-image: url("https://www.ariostea-high-tech.com/img/collezioni/cm2-teknostone/+Floors-desktop.jpg");
-}
+} */
 </style>
