@@ -349,17 +349,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-/* div.parent {
-  pointer-events: none;
-}
-
-div.child {
-  pointer-events: auto;
-}
-
-div.parent:hover {
-  background-image: url("https://www.ariostea-high-tech.com/img/collezioni/cm2-teknostone/+Floors-desktop.jpg");
-} */
-</style>
