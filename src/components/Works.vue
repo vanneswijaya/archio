@@ -1,5 +1,5 @@
 <template>
-  <Loading v-if="loaded"></Loading>
+  <Loading v-if="!loaded"></Loading>
   <div v-else class="flex flex-col bg-merah overflow-hidden">
     <section
       class="w-screen h-screen bg-cover bg-center flex flex-col z-0"
@@ -389,15 +389,39 @@ export default {
   },
   data() {
     return {
-      loaded: true,
+      loaded: false,
     };
   },
-  async created() {
-    console.log(this.loaded);
-    setTimeout(() => {
-      this.loaded = false;
-    }, 3000);
-    console.log(this.loaded);
+  async mounted() {
+    var imagesToPreload = [
+      "https://drowart.com/wp-content/uploads/2021/04/PORTFOLIO_04_17-2396x1600.jpg",
+      "https://drowart.com/wp-content/uploads/2021/05/WANICKI_salon_2-1386x1600.jpg",
+      "https://drowart.com/wp-content/uploads/2021/05/PORTFOLIO_01_15-2346x1600.jpg",
+      "https://drowart.com/wp-content/uploads/2021/04/PORTFOLIO_01_1-2402x1600.jpg",
+      "https://drowart.com/wp-content/uploads/2021/05/PORTFOLIO_03_2-1120x1600.jpg",
+      "https://drowart.com/wp-content/uploads/2021/04/PORTFOLIO_04_28-scaled.jpg",
+      "https://drowart.com/wp-content/uploads/2021/04/PORTFOLIO_02_3-scaled.jpg",
+      "https://parametric-architecture.com/wp-content/uploads/2019/09/veronang_PA_03.jpg",
+    ];
+    // console.log(imagesToPreload);
+    const images = imagesToPreload.map((imageSrc) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = imageSrc;
+        img.onload = resolve;
+        img.onerror = reject;
+      });
+    });
+
+    Promise.all(images)
+      .then(() => {
+        // console.log("Images loaded!");
+        this.loaded = true;
+      })
+      .catch((error) => {
+        console.error("Some image(s) failed loading!");
+        console.error(error.message);
+      });
   },
 };
 </script>

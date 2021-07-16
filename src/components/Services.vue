@@ -1,5 +1,5 @@
 <template>
-  <Loading v-if="loaded"></Loading>
+  <Loading v-if="!loaded"></Loading>
   <div v-else class="flex flex-col bg-merah overflow-hidden">
     <section
       class="w-screen h-screen bg-cover bg-center flex flex-row relative z-0"
@@ -411,7 +411,7 @@ export default {
   },
   data() {
     return {
-      loaded: true,
+      loaded: false,
       interior: true,
       exterior: false,
       animation: false,
@@ -433,12 +433,44 @@ export default {
       }
     },
   },
-  async created() {
-    console.log(this.loaded);
-    setTimeout(() => {
-      this.loaded = false;
-    }, 3000);
-    console.log(this.loaded);
+  async mounted() {
+    var imagesToPreload = [
+      "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/104938059/original/cecf195734c5b725db32a9baca77786a6379adbb/model-and-render-high-end-architectural-projects.jpg",
+      "https://cdn.wallpaper.com/main/g_ad-gin-studio-gb-space-20-facade-1.gif",
+      "https://enkimagazine.com/wp-content/uploads/2019/09/Sara-Klomps-colour-1.jpg",
+      "https://p4.wallpaperbetter.com/wallpaper/726/924/893/house-modern-architecture-lights-hd-wallpaper-preview.jpg",
+      "https://c4.wallpaperflare.com/wallpaper/79/352/53/modern-architecture-nature-landscape-wallpaper-preview.jpg",
+      "https://i.pinimg.com/originals/61/52/9c/61529cdb0a6378f43e3b9e342f3c6eed.jpg",
+      "https://seasunproperty.es/wp-content/uploads/2020/03/191217_21J_night_HQ_00_01-SN.jpg",
+      "https://thumbs.gfycat.com/ConcernedTotalDobermanpinscher-size_restricted.gif",
+      "https://drowart.com/wp-content/uploads/2021/04/PORTFOLIO_02_13-scaled.jpg",
+      "https://drowart.com/wp-content/uploads/2021/04/STEVEN_NOA_03_2_PP-2560x1646.jpg",
+      "https://drowart.com/wp-content/uploads/2021/04/PORTFOLIO_02_12-scaled.jpg",
+      "https://drowart.com/wp-content/uploads/2021/05/PORTFOLIO_04_10-2396x1600.jpg",
+      "https://drowart.com/wp-content/uploads/2021/05/PORTFOLIO_04_15-scaled.jpg",
+      "https://drowart.com/wp-content/uploads/2021/04/PORTFOLIO_04_19-2560x1709.jpg",
+      "https://drowart.com/wp-content/uploads/2021/05/PORTFOLIO_04_22-1200x1600.jpg",
+      "https://drowart.com/wp-content/uploads/2021/04/PORTFOLIO_04_27-scaled.jpg",
+    ];
+    // console.log(imagesToPreload);
+    const images = imagesToPreload.map((imageSrc) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = imageSrc;
+        img.onload = resolve;
+        img.onerror = reject;
+      });
+    });
+
+    Promise.all(images)
+      .then(() => {
+        // console.log("Images loaded!");
+        this.loaded = true;
+      })
+      .catch((error) => {
+        console.error("Some image(s) failed loading!");
+        console.error(error.message);
+      });
   },
 };
 </script>

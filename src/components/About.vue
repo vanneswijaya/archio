@@ -1,11 +1,17 @@
 <template>
-  <Loading v-if="loaded"></Loading>
+  <Loading v-if="!loaded"></Loading>
   <div v-else class="flex flex-col overflow-x-hidden">
     <section class="relative flex flex-col w-full">
       <div class="absolute left-96 top-72">
         <div class="flex flex-nowrap gap-10">
           <div class="video-container relative w-160">
-            <video autoplay muted loop class="absolute object-cover">
+            <video
+              autoplay
+              muted
+              loop
+              class="absolute object-cover"
+              preload="auto"
+            >
               <source
                 src="https://drowart.com/wp-content/uploads/2021/03/anim_9_sek.mp4"
                 type="video/mp4"
@@ -335,17 +341,42 @@ export default {
   },
   data() {
     return {
-      loaded: true,
+      loaded: false,
       bgimage:
         "https://images.adsttc.com/media/images/5e6f/6c5d/b357/653d/d300/02f8/large_jpg/TARA_HI-RES-107_Master.jpg?1584360500",
     };
   },
-  async created() {
-    console.log(this.loaded);
-    setTimeout(() => {
-      this.loaded = false;
-    }, 3000);
-    console.log(this.loaded);
+  async mounted() {
+    var imagesToPreload = [
+      "https://images.adsttc.com/media/images/5e6f/6c5d/b357/653d/d300/02f8/large_jpg/TARA_HI-RES-107_Master.jpg?1584360500",
+      "https://drowart.com/wp-content/uploads/2021/05/STEVEN_NOA_03_3_PP-2488x1600.jpg",
+      "https://images.adsttc.com/media/images/5e6f/6c5d/b357/653d/d300/02f8/large_jpg/TARA_HI-RES-107_Master.jpg?1584360500",
+      "https://www.ariostea-high-tech.com/img/collezioni/cm2-teknostone/+Floors-desktop.jpg",
+      "http://cdn.home-designing.com/wp-content/uploads/2014/06/sloping-landscape-design.jpg",
+      "http://cdn.home-designing.com/wp-content/uploads/2014/06/modern-villa-landscape.jpg",
+      "https://tero.design/multimedia/forest_villa/cam02-min.jpg",
+      "https://media.istockphoto.com/photos/portrait-of-handsome-latino-african-man-picture-id1007763808?k=6&m=1007763808&s=612x612&w=0&h=Js1VDBulbaNw_CF7fghP_nhUPCC-DQTqb7Wym1CdTOI=",
+      "https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8OXx8fGVufDB8fHx8&w=1000&q=80",
+    ];
+    // console.log(imagesToPreload);
+    const images = imagesToPreload.map((imageSrc) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = imageSrc;
+        img.onload = resolve;
+        img.onerror = reject;
+      });
+    });
+
+    Promise.all(images)
+      .then(() => {
+        // console.log("Images loaded!");
+        this.loaded = true;
+      })
+      .catch((error) => {
+        console.error("Some image(s) failed loading!");
+        console.error(error.message);
+      });
   },
 };
 </script>

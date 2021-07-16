@@ -1,5 +1,5 @@
 <template>
-  <Loading v-if="loaded"></Loading>
+  <Loading v-if="!loaded"></Loading>
   <div v-else class="flex flex-col">
     <section class="flex flex-col h-full w-screen bg-merah">
       <div class="flex flex-row">
@@ -286,15 +286,35 @@ export default {
   },
   data() {
     return {
-      loaded: true,
+      loaded: false,
     };
   },
-  async created() {
-    console.log(this.loaded);
-    setTimeout(() => {
-      this.loaded = false;
-    }, 3000);
-    console.log(this.loaded);
+  async mounted() {
+    var imagesToPreload = [
+      "https://images.adsttc.com/media/images/5e5c/e5e5/6ee6/7e0f/0100/0923/original/DT2100.gif?1583146459",
+      "https://lumo-visual.com/wp-content/uploads/2013/10/1.jpg",
+      "https://static.wixstatic.com/media/145750_e3b8cd35231048289171105496f0de33~mv2.jpg/v1/fill/w_580,h_861,al_c,q_85,usm_0.66_1.00_0.01/145750_e3b8cd35231048289171105496f0de33~mv2.jpg",
+      "https://i.pinimg.com/originals/5a/e3/eb/5ae3eb73f733be342867f7f1b5fd98fd.jpg",
+    ];
+    // console.log(imagesToPreload);
+    const images = imagesToPreload.map((imageSrc) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = imageSrc;
+        img.onload = resolve;
+        img.onerror = reject;
+      });
+    });
+
+    Promise.all(images)
+      .then(() => {
+        // console.log("Images loaded!");
+        this.loaded = true;
+      })
+      .catch((error) => {
+        console.error("Some image(s) failed loading!");
+        console.error(error.message);
+      });
   },
 };
 </script>
