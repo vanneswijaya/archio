@@ -18,7 +18,7 @@
       </div>
       <div class="h-8"></div>
       <div class="flex flex-row ml-36 gap-10">
-        <a href="">
+        <router-link to="/about">
           <div
             class="
               p-4
@@ -39,8 +39,8 @@
           >
             <button>About Us</button>
           </div>
-        </a>
-        <a href="">
+        </router-link>
+        <router-link to="/services">
           <div
             class="
               p-4
@@ -61,8 +61,8 @@
           >
             <button>Services</button>
           </div>
-        </a>
-        <a href="">
+        </router-link>
+        <router-link to="works">
           <div
             class="
               p-4
@@ -83,7 +83,7 @@
           >
             <button>Our Works</button>
           </div>
-        </a>
+        </router-link>
       </div>
       <div class="h-36"></div>
     </section>
@@ -103,7 +103,7 @@
           needs.
         </div>
         <div class="flex flex-row gap-10">
-          <a href="">
+          <router-link to="/services">
             <div
               class="
                 p-4
@@ -124,8 +124,8 @@
             >
               <button>Interior Design</button>
             </div>
-          </a>
-          <a href="">
+          </router-link>
+          <router-link to="/services">
             <div
               class="
                 p-4
@@ -146,8 +146,8 @@
             >
               <button>Exterior Design</button>
             </div>
-          </a>
-          <a href="">
+          </router-link>
+          <router-link to="/services">
             <div
               class="
                 p-4
@@ -168,7 +168,7 @@
             >
               <button>3D Animation</button>
             </div>
-          </a>
+          </router-link>
         </div>
       </div>
     </section>
@@ -185,7 +185,7 @@
         <div class="text-2xl text-white font-thin leading-tight">
           Discover our latest projects
         </div>
-        <a href="">
+        <router-link to="/works">
           <div
             class="
               p-4
@@ -206,7 +206,7 @@
           >
             <button>Explore</button>
           </div>
-        </a>
+        </router-link>
       </div>
     </section>
     <section
@@ -224,7 +224,7 @@
           <p class="text-hijaumuda">Are you ready?</p>
         </div>
         <div class="flex flex-row gap-10">
-          <a href="">
+          <a href="https://wa.me/6285711111111">
             <div
               class="
                 p-4
@@ -246,7 +246,7 @@
               <button>Book Appointment</button>
             </div>
           </a>
-          <a href="">
+          <router-link to="/contact">
             <div
               class="
                 p-4
@@ -267,7 +267,7 @@
             >
               <button>Contact Us</button>
             </div>
-          </a>
+          </router-link>
         </div>
       </div>
     </section>

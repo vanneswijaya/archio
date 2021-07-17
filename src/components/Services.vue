@@ -345,7 +345,7 @@
           <p class="text-merah">Interested in our services?</p>
         </div>
         <div class="flex flex-row gap-10">
-          <a href="">
+          <a href="https://wa.me/6285711111111">
             <div
               class="
                 p-4
@@ -367,7 +367,7 @@
               <button>Book Appointment</button>
             </div>
           </a>
-          <a href="">
+          <router-link to="/contact">
             <div
               class="
                 p-4
@@ -388,7 +388,7 @@
             >
               <button>Contact Us</button>
             </div>
-          </a>
+          </router-link>
         </div>
       </div>
       <img

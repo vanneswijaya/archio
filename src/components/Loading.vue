@@ -1,6 +1,6 @@
 <template>
   <div class="w-screen h-screen flex justify-center items-center bg-merah">
-    <div class="lds-facebook">
+    <div class="loading-bars">
       <div></div>
       <div></div>
       <div></div>
@@ -9,33 +9,33 @@
 </template>
 
 <style scoped>
-.lds-facebook {
+.loading-bars {
   display: inline-block;
   position: relative;
   width: 80px;
   height: 80px;
 }
-.lds-facebook div {
+.loading-bars div {
   display: inline-block;
   position: absolute;
   left: 8px;
   width: 16px;
   background: #d36135;
-  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  animation: loading-bars 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
 }
-.lds-facebook div:nth-child(1) {
+.loading-bars div:nth-child(1) {
   left: 8px;
   animation-delay: -0.24s;
 }
-.lds-facebook div:nth-child(2) {
+.loading-bars div:nth-child(2) {
   left: 32px;
   animation-delay: -0.12s;
 }
-.lds-facebook div:nth-child(3) {
+.loading-bars div:nth-child(3) {
   left: 56px;
   animation-delay: 0;
 }
-@keyframes lds-facebook {
+@keyframes loading-bars {
   0% {
     top: 8px;
     height: 64px;

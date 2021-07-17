@@ -1,5 +1,5 @@
 <template>
-  <Loading v-if="loaded"></Loading>
+  <Loading v-if="!loaded"></Loading>
   <div v-else class="flex flex-col">
     <div
       class="top-0 w-screen h-full px-20 py-36 justify-items-center bg-merah"
@@ -63,16 +63,31 @@ export default {
   },
   data() {
     return {
-      loaded: true,
+      loaded: false,
       success: false,
     };
   },
-  async created() {
-    console.log(this.loaded);
-    setTimeout(() => {
-      this.loaded = false;
-    }, 3000);
-    console.log(this.loaded);
+  async mounted() {
+    var imagesToPreload = [];
+    // console.log(imagesToPreload);
+    const images = imagesToPreload.map((imageSrc) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = imageSrc;
+        img.onload = resolve;
+        img.onerror = reject;
+      });
+    });
+
+    Promise.all(images)
+      .then(() => {
+        // console.log("Images loaded!");
+        this.loaded = true;
+      })
+      .catch((error) => {
+        console.error("Some image(s) failed loading!");
+        console.error(error.message);
+      });
   },
 };
 </script>

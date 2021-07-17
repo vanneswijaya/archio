@@ -32,9 +32,8 @@
         <span class="bg-white"></span>
       </div>
     </div>
-    <a
-      href="/"
-      v-on:click="toOtherPage('')"
+    <router-link
+      to="/"
       class="
         flex
         lg:text-2xl
@@ -59,7 +58,7 @@
       >
         <span class="font-thin -mt-2">ARCHIO</span>
       </div>
-    </a>
+    </router-link>
     <div class="lg:hidden w-12 h-full bg-merah"></div>
 
     <div
@@ -77,8 +76,8 @@
         font-normal
       "
     >
-      <a
-        href="/"
+      <router-link
+        to="/"
         class="
           mr-3
           default
@@ -97,10 +96,10 @@
         :class="{
           onPage: $route.meta.onPage === 'home',
         }"
-        >Home</a
+        >Home</router-link
       >
-      <a
-        href="/about"
+      <router-link
+        to="/about"
         class="
           mr-3
           default
@@ -118,10 +117,10 @@
         :class="{
           onPage: $route.meta.onPage === 'about',
         }"
-        >About Us</a
+        >About Us</router-link
       >
-      <a
-        href="/services"
+      <router-link
+        to="/services"
         class="
           mr-3
           default
@@ -139,10 +138,10 @@
         :class="{
           onPage: $route.meta.onPage === 'services',
         }"
-        >Services</a
+        >Services</router-link
       >
-      <a
-        href="/works"
+      <router-link
+        to="/works"
         class="
           mr-3
           default
@@ -160,10 +159,10 @@
         :class="{
           onPage: $route.meta.onPage === 'works',
         }"
-        >Our Works</a
+        >Our Works</router-link
       >
-      <a
-        href="/contact"
+      <router-link
+        to="/contact"
         class="
           mr-3
           default
@@ -181,7 +180,7 @@
         :class="{
           onPage: $route.meta.onPage === 'contact',
         }"
-        >Contact</a
+        >Contact</router-link
       >
     </div>
 
@@ -210,52 +209,52 @@
             font-thin
           "
         >
-          <a
-            href="/"
+          <router-link
+            to="/"
             class="cursor-pointer mb-3 hover:font-medium"
             :class="{
               onPage: $route.meta.onPage === 'home',
               canHover: $route.meta.onPage !== 'home',
             }"
-            >Home</a
+            >Home</router-link
           >
-          <a
-            href="/about"
+          <router-link
+            to="/about"
             v-on:click="toOtherPage('about')"
             class="cursor-pointer mb-3 hover:font-medium"
             :class="{
               onPage: $route.meta.onPage === 'about',
               canHover: $route.meta.onPage !== 'about',
             }"
-            >About</a
+            >About</router-link
           >
-          <a
-            href="/works"
+          <router-link
+            to="/works"
             class="cursor-pointer mb-3 hover:font-medium"
             :class="{
               onPage: $route.meta.onPage === 'works',
               canHover: $route.meta.onPage !== 'works',
             }"
-            >Our Works</a
+            >Our Works</router-link
           >
-          <a
-            href="/services"
+          <router-link
+            to="/services"
             class="cursor-pointer mb-3 hover:font-medium"
             :class="{
               onPage: $route.meta.onPage === 'services',
               canHover: $route.meta.onPage !== 'services',
             }"
-            >Services</a
+            >Services</router-link
           >
-          <a
-            href="/contact"
+          <router-link
+            to="/contact"
             v-on:click="toOtherPage('contact')"
             class="cursor-pointer mb-3 hover:font-medium"
             :class="{
               onPage: $route.meta.onPage === 'contact',
               canHover: $route.meta.onPage !== 'contact',
             }"
-            >Contact Us</a
+            >Contact Us</router-link
           >
         </div>
       </div>
@@ -271,8 +270,6 @@ export default {
   },
   data() {
     return {
-      headerAuth: "",
-      url: "https://merello.my.id",
       showNavbar: true,
       lastScrollPosition: 0,
       view: {

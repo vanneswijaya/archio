@@ -267,19 +267,14 @@
         style="
           background-image: url('https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8OXx8fGVufDB8fHx8&w=1000&q=80');
         "
-      >
-        <!-- <img
-          src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8OXx8fGVufDB8fHx8&w=1000&q=80"
-          alt=""
-        /> -->
-      </div>
+      ></div>
       <div class="w-1/2 h-full mx-20 mt-10 flex flex-col gap-10">
         <div class="text-5xl text-white font-medium leading-tight">
           Ready to change your living space?<br />
           <p class="text-hijaumuda">Connect with us now.</p>
         </div>
         <div class="flex flex-row gap-10">
-          <a href="">
+          <a href="https://wa.me/6285711111111">
             <div
               class="
                 p-4
@@ -301,7 +296,7 @@
               <button>Book Appointment</button>
             </div>
           </a>
-          <a href="">
+          <router-link to="/contact">
             <div
               class="
                 p-4
@@ -322,7 +317,7 @@
             >
               <button>Contact Us</button>
             </div>
-          </a>
+          </router-link>
         </div>
       </div>
     </section>
