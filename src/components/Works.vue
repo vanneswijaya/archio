@@ -379,10 +379,20 @@
 
 <script>
 import Loading from "./Loading.vue";
+import FromLeft from "./transitions/fromLeft.vue";
+import FromRight from "./transitions/fromRight.vue";
+import FromBottom from "./transitions/fromBottom.vue";
+import FromTop from "./transitions/fromTop.vue";
+import Fade from "./transitions/Fade.vue";
 
 export default {
   components: {
     Loading,
+    FromLeft,
+    FromRight,
+    FromBottom,
+    FromTop,
+    Fade,
   },
   setup() {
     return {};
