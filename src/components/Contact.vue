@@ -19,32 +19,42 @@
           flex-col
         "
       >
-        <p>Your inquiry has been sent</p>
+        <FromRight delay="1" duration="2">
+          <p>Your inquiry has been sent</p>
+        </FromRight>
 
-        <p class="text-2xl font-thin pt-10">
-          We will get back to you as soon as possible
-        </p>
+        <FromLeft delay="1" duration="2">
+          <p class="text-2xl font-thin pt-10">
+            We will get back to you as soon as possible
+          </p>
+        </FromLeft>
       </div>
       <div v-else class="flex flex-col w-full h-full">
-        <div class="text-7xl font-thin text-white pl-20">
-          FIND OUT HOW WE CAN HELP YOU
-        </div>
-        <div class="text-white font-thin text-xl flex justify-center pt-16">
-          <form class="form flex flex-col gap-y-5">
-            <div class="input-container">
-              <input type="text" class="input" placeholder="Full name" />
-            </div>
-            <div class="input-container">
-              <input type="text" class="input" placeholder="E-mail" />
-            </div>
-            <div class="lastinput-container">
-              <textarea type="text" class="lastinput" placeholder="Message" />
-            </div>
-            <div>
-              <button @click="success = !success" class="submit">SUBMIT</button>
-            </div>
-          </form>
-        </div>
+        <FromTop delay="1" duration="2">
+          <div class="text-7xl font-thin text-white pl-20">
+            FIND OUT HOW WE CAN HELP YOU
+          </div>
+        </FromTop>
+        <Fade delay="1" duration="2">
+          <div class="text-white font-thin text-xl flex justify-center pt-16">
+            <form class="form flex flex-col gap-y-5">
+              <div class="input-container">
+                <input type="text" class="input" placeholder="Full name" />
+              </div>
+              <div class="input-container">
+                <input type="text" class="input" placeholder="E-mail" />
+              </div>
+              <div class="lastinput-container">
+                <textarea type="text" class="lastinput" placeholder="Message" />
+              </div>
+              <div>
+                <button @click="success = !success" class="submit">
+                  SUBMIT
+                </button>
+              </div>
+            </form>
+          </div>
+        </Fade>
       </div>
       <div></div>
     </div>
