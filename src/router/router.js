@@ -1,4 +1,4 @@
-import { createWebHashHistory, createRouter } from "vue-router";
+import { createWebHistory, createRouter } from "vue-router";
 import Home from "../components/Home.vue";
 import About from "../components/About.vue";
 import Works from "../components/Works.vue";
@@ -57,7 +57,7 @@ const routes = [
 
 const router = createRouter({
   mode: "history",
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
     return new Promise((resolve, reject) => {
