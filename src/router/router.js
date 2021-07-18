@@ -57,7 +57,7 @@ const routes = [
 
 const router = createRouter({
   mode: "history",
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
     return new Promise((resolve, reject) => {
