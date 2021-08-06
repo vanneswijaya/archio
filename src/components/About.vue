@@ -5,22 +5,14 @@
       <div class="absolute left-96 top-72">
         <div class="flex flex-nowrap gap-10">
           <Fade delay="1" duration="2">
-            <div class="video-container relative w-160">
-              <video
-                autoplay
-                muted
-                loop
-                class="absolute object-cover"
-                preload="auto"
-              >
-                <source
-                  src="https://drowart.com/wp-content/uploads/2021/03/anim_9_sek.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
+            <div
+              class="h-90 w-160 bg-center bg-cover"
+              style="
+                background-image: url('https://newschoolarch.edu/wp-content/uploads/2019/01/What-Do-Interior-Architects-Do_.jpeg');
+              "
+            ></div>
           </Fade>
-          <Fade delay="2" duration="2">
+          <Fade delay="1" duration="2">
             <div
               class="h-90 w-160 bg-center bg-cover"
               style="
@@ -261,21 +253,20 @@
         <div
           class="flex flex-col gap-y-8 items-center w-full h-full pt-36 pr-36"
         >
-          <Fade delay="1" duration="2">
-            <div
-              class="
-                text-5xl text-white
-                font-semibold
-                cursor-pointer
-                hover:text-hijaumuda
-                transition
-                duration-500
-                ease-in-out
-              "
-            >
-              John Almeida
-            </div>
-          </Fade>
+          <div
+            class="
+              text-5xl text-white
+              font-semibold
+              cursor-pointer
+              hover:text-hijaumuda
+              transition
+              duration-500
+              ease-in-out
+            "
+          >
+            John Almeida
+          </div>
+
           <FromLeft delay="1" duration="2">
             <div class="text-2xl text-white font-light px-20 text-justify">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero
@@ -394,6 +385,7 @@ export default {
       "https://tero.design/multimedia/forest_villa/cam02-min.jpg",
       "https://media.istockphoto.com/photos/portrait-of-handsome-latino-african-man-picture-id1007763808?k=6&m=1007763808&s=612x612&w=0&h=Js1VDBulbaNw_CF7fghP_nhUPCC-DQTqb7Wym1CdTOI=",
       "https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8OXx8fGVufDB8fHx8&w=1000&q=80",
+      "https://newschoolarch.edu/wp-content/uploads/2019/01/What-Do-Interior-Architects-Do_.jpeg",
     ];
     // console.log(imagesToPreload);
     const images = imagesToPreload.map((imageSrc) => {
