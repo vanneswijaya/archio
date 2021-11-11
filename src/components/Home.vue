@@ -96,7 +96,7 @@
     <section
       class="w-full h-screen flex flex-col z-0 bg-cover"
       style="
-        background-image: url('https://lumo-visual.com/wp-content/uploads/2013/10/1.jpg');
+        background-image: url('https://www.lumo-visual.com/wp-content/uploads/2021/09/CIMENTO-TORCELLO-1-2.jpg');
       "
     >
       <div class="bg-black bg-opacity-50 absolute w-full h-full"></div>
@@ -325,7 +325,7 @@ export default {
   async mounted() {
     var imagesToPreload = [
       "https://images.adsttc.com/media/images/5e5c/e5e5/6ee6/7e0f/0100/0923/original/DT2100.gif?1583146459",
-      "https://lumo-visual.com/wp-content/uploads/2013/10/1.jpg",
+      "https://www.lumo-visual.com/wp-content/uploads/2021/09/CIMENTO-TORCELLO-1-2.jpg",
       "https://static.wixstatic.com/media/145750_e3b8cd35231048289171105496f0de33~mv2.jpg/v1/fill/w_580,h_861,al_c,q_85,usm_0.66_1.00_0.01/145750_e3b8cd35231048289171105496f0de33~mv2.jpg",
       "https://i.pinimg.com/originals/5a/e3/eb/5ae3eb73f733be342867f7f1b5fd98fd.jpg",
     ];
